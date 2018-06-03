@@ -1,6 +1,6 @@
 {
   "name": "@headwood/test-helper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Test helper",
   "main": "built/helper.js",
   "types": "built/helper",
