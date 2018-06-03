@@ -1,10 +1,11 @@
----
 compileOnSave: true
 compilerOptions:
   target: es6
   module: commonjs
+  moduleResolution: node
   rootDir: .
-  outDir: '{{ builtLibDir }}'
+  baseUrl: ./
+  outDir: '{{ builtDir }}'
   declaration: true
   noImplicitAny: true
   inlineSourceMap: true
@@ -12,7 +13,10 @@ compilerOptions:
   strictNullChecks: true
   typeRoots:
     - node_modules/@types
-    - '{{ typeDir }}'
+    - '{{ typesDir }}'
+  paths:
+    '*':
+      - node_modules/@types/*
+      - '*'
 include:
   - '{{ libDir }}/**/*.ts'
-  - '{{ typeDir }}/**/*.d.ts'

@@ -5,7 +5,7 @@ import {
   SinonSandbox,
   proxyquire,
   givenDesc,
-} from '@hw/test-helper'
+} from '@headwood/test-helper'
 
 describe('private-object', () => {
   let PrivateObject: any

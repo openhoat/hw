@@ -10,9 +10,13 @@ scripts:
       default:
         script: rimraf {{ builtDir }}/**
         description: Clean the built directory
+    test-built:
+      default:
+        script: rimraf {{ distDir }}/test-built/**
+        description: Clean the built test directory
   build:
     default:
-      script: nps clean.built && nps build.generate && nps build.lib.compile && nps build.test.types && nps build.test.compile
+      script: nps clean.built && nps build.generate && nps build.lib.compile && nps clean.test-built && nps build.test.types && nps build.test.compile
       description: Clean and build the project
     generate:
       script: generate-tsconfig tsconfig.tpl.yml {{ libDir }}/tsconfig.tpl.yml {{ testDir }}/tsconfig.tpl.yml

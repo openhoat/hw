@@ -1,8 +1,7 @@
 extends: ../tsconfig.json
 compilerOptions:
   rootDir: ..
-  outDir: '../{{ builtDir }}'
+  outDir: '../{{ distDir }}/test-built'
 include:
   - '../{{ libDir }}/**/*.ts'
-  - '../{{ testDir }}/**/*.ts'
-  - '{{ typeDir }}/**/*.d.ts'
+  - './**/*.ts'

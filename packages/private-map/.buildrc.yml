@@ -1,7 +1,6 @@
----
-builtDir: built
-distDir: dist
-builtLibDir: built/lib
 libDir: lib
 testDir: test
-typeDir: types
+typesDir: types
+builtDir: built
+distDir: dist
+mainScript: lib/private-map.ts

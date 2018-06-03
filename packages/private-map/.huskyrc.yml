@@ -1,0 +1,3 @@
+hooks:
+  pre-commit: nps lint && nps 'test -- --forbid-only'
+  pre-push": nps check
