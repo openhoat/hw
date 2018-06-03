@@ -3,7 +3,7 @@ import { set, get } from 'lodash'
 class PrivateData {
   constructor(defaults?: any) {
     if (typeof defaults === 'object') {
-      Object.assign(this, defaults)
+      (<any>Object).assign(this, defaults)
     }
   }
 
