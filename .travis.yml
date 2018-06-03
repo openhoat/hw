@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "10.0.0"
+env:
+  global:
+    - SCOPE=headwood
+  matrix:
+    - PACKAGE=ts-build-template
+script:
+  - "lerna run start cover.travis --scope=@$SCOPE/$PACKAGE"
