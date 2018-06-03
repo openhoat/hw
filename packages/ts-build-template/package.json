@@ -1,5 +1,5 @@
 {
-  "name": "@hw/ts-build-template",
+  "name": "@headwood/ts-build-template",
   "version": "0.0.1",
   "description": "TypeScript build template tools",
   "main": "lib/ts-build-template.js",
