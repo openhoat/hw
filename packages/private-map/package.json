@@ -28,8 +28,6 @@
   "devDependencies": {
     "@headwood/test-helper": "^0.0.5",
     "@headwood/ts-build-template": "^0.0.3",
-    "@types/chai": "^4.0.10",
-    "@types/chai-as-promised": "^7.1.0",
     "@types/lodash": "^4.14.109",
     "@types/mocha": "^5.2.0",
     "@types/node": "^10.0.8",
