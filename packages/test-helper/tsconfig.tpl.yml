@@ -11,6 +11,7 @@ compilerOptions:
   inlineSourceMap: true
   removeComments: true
   strictNullChecks: true
+  skipLibCheck: true
   typeRoots:
     - node_modules/@types
     - '{{ typesDir }}'
