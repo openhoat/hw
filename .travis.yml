@@ -7,6 +7,6 @@ env:
   matrix:
     - PACKAGE=ts-build-template
 install:
-  - "lerna bootstrap --scope=@$SCOPE/$PACKAGE"
+  - "npx lerna bootstrap --scope=@$SCOPE/$PACKAGE"
 script:
-  - "lerna run start cover.travis --scope=@$SCOPE/$PACKAGE"
+  - "npx lerna run start cover.travis --scope=@$SCOPE/$PACKAGE"
