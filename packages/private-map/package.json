@@ -1,6 +1,9 @@
 {
-  "description": "Headwood utils for nodejs programming",
-  "private": true,
+  "name": "@headwood/private-map",
+  "version": "0.0.2",
+  "description": "Private map for real private class properties use",
+  "main": "built/private-map.js",
+  "types": "built/private-map",
   "scripts": {
     "start": "nps",
     "build": "nps build",
@@ -11,23 +14,21 @@
   "author": "Olivier Penhoat <openhoat@gmail.com> (http://headwood.net/)",
   "repository": {
     "type": "git",
-    "url": "git@github.com:openhoat/node-command.git"
+    "url": "git@github.com:openhoat/hw.git"
   },
   "bugs": {
-    "url": "https://github.com/openhoat/node-command/issues"
+    "url": "https://github.com/openhoat/hw/issues"
   },
   "engines": {
     "node": ">= 8"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "nps lint && nps 'test -- --forbid-only'",
-      "pre-push": "nps check"
-    }
-  },
   "dependencies": {
+    "@types/lodash": "^4.14.109",
+    "lodash": "^4.17.10"
   },
   "devDependencies": {
+    "@headwood/test-helper": "^0.0.4",
+    "@headwood/ts-build-template": "^0.0.3",
     "@types/chai": "^4.0.10",
     "@types/chai-as-promised": "^7.1.0",
     "@types/es6-promise": "^3.3.0",
@@ -40,7 +41,6 @@
     "chai-as-promised": "^7.1.1",
     "cpx": "^1.5.0",
     "husky": "^0.14.3",
-    "lerna": "^2.11.0",
     "mocha": "^5.1.1",
     "nps": "^5.9.0",
     "nyc": "^11.7.3",
@@ -49,7 +49,6 @@
     "sinon": "^5.0.7",
     "sinon-chai": "^3.0.0",
     "source-map-support": "^0.5.0",
-    "ts-build-template": "^0.0.2",
     "ts-loader": "^4.3.0",
     "ts-node": "^6.0.3",
     "tslint": "^5.8.0",
