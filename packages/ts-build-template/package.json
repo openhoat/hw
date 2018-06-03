@@ -1,0 +1,55 @@
+{
+  "name": "@hw/ts-build-template",
+  "version": "0.0.1",
+  "description": "TypeScript build template tools",
+  "main": "lib/ts-build-template.js",
+  "types": "types/ts-build-template.d.ts",
+  "bin": {
+    "generate-tsconfig": "bin/generate-tsconfig.js"
+  },
+  "scripts": {
+    "start": "nps",
+    "test": "nps 'test --forbid-only'"
+  },
+  "keywords": [
+    "typescript",
+    "tsconfig",
+    "package-scripts",
+    "generator"
+  ],
+  "author": "Olivier Penhoat <openhoat@gmail.com> (http://headwood.net/)",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:openhoat/ts-build-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/openhoat/ts-build-template/issues"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "nps lint && nps 'test -- --forbid-only'",
+      "pre-push": "nps check"
+    }
+  },
+  "dependencies": {
+    "handlebars": "^4.0.11",
+    "js-yaml": "^3.11.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "coveralls": "^3.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-nodejs": "^2.0.0",
+    "husky": "^0.14.3",
+    "mocha": "^5.1.1",
+    "nps": "^5.9.0",
+    "nyc": "^11.7.3",
+    "proxyquire": "^2.0.1",
+    "sinon": "^5.0.7",
+    "sinon-chai": "^3.0.0"
+  }
+}

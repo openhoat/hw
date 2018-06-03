@@ -1,0 +1,10 @@
+.editorconig
+.eslint*
+.gitignore
+.idea/
+.node-version
+.nycrc
+.travis.yml
+dist/
+test/
+tslint.json

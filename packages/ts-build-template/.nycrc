@@ -1,0 +1,17 @@
+{
+  "extension": [
+    ".js"
+  ],
+  "exclude": [
+    "dist",
+    "test",
+    "package-scripts.js"
+  ],
+  "temp-directory": "./dist/.nyc_output",
+  "report-dir": "./dist/coverage",
+  "reporter": [
+    "html",
+    "text-summary"
+  ],
+  "all": true
+}
