@@ -1,8 +1,5 @@
 import {
   expect,
-  hasBeenCalled,
-  createSandbox,
-  SinonSandbox,
   proxyquire,
   givenDesc,
 } from '@headwood/test-helper'
