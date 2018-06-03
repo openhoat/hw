@@ -6,6 +6,7 @@ env:
     - SCOPE=headwood
   matrix:
     - PACKAGE=ts-build-template
+    - PACKAGE=test-helper
 install:
   - "npx lerna bootstrap --scope=@$SCOPE/$PACKAGE"
 script:
