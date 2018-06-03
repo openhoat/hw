@@ -1,0 +1,7 @@
+---
+builtDir: built
+distDir: dist
+builtLibDir: built/lib
+libDir: lib
+testDir: test
+typeDir: types
