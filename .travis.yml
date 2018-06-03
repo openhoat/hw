@@ -5,6 +5,7 @@ env:
   global:
     - SCOPE=headwood
   matrix:
+    - PACKAGE=private-map
     - PACKAGE=ts-build-template
     - PACKAGE=test-helper
 install:
