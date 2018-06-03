@@ -27,7 +27,7 @@
     "lodash": "^4.17.10"
   },
   "devDependencies": {
-    "@headwood/test-helper": "^0.0.4",
+    "@headwood/test-helper": "^0.0.5",
     "@headwood/ts-build-template": "^0.0.3",
     "@types/chai": "^4.0.10",
     "@types/chai-as-promised": "^7.1.0",
