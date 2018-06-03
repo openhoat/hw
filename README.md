@@ -9,6 +9,10 @@ This project is a nodejs multi modules project to use with [lerna](https://lerna
 
 ## Modules
 
+### [@headwood/private-map](https://github.com/openhoat/hw/tree/master/packages/private-map)
+
+[![npm version](https://badge.fury.io/js/%40headwood%2Fprivate-map.svg)](https://badge.fury.io/js/%40headwood%2Fprivate-map)
+
 ### [@headwood/ts-build-template](https://github.com/openhoat/hw/tree/master/packages/ts-build-template)
 
 [![npm version](https://badge.fury.io/js/%40headwood%2Fts-build-template.svg)](https://badge.fury.io/js/%40headwood%2Fts-build-template)
