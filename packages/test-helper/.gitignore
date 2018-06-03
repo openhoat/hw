@@ -1,0 +1,11 @@
+.idea/
+.DS_Store
+.vscode
+.history
+.nyc_output
+built/
+dist/
+node_modules/
+tsconfig.json
+lib/tsconfig.json
+test/tsconfig.json

@@ -1,0 +1,57 @@
+{
+  "name": "@headwood/test-helper",
+  "version": "0.0.1",
+  "description": "Test helper",
+  "private": true,
+  "main": "built/helper.js",
+  "types": "built/helper",
+  "scripts": {
+    "start": "nps",
+    "build": "nps build",
+    "test": "nps test",
+    "validate": "nps validate",
+    "prepublishOnly": "nps build"
+  },
+  "author": "Olivier Penhoat <openhoat@gmail.com> (http://headwood.net/)",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:openhoat/hw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/openhoat/hw/issues"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "dependencies": {
+    "@types/chai": "^4.0.10",
+    "@types/chai-as-promised": "^7.1.0",
+    "@types/proxyquire": "^1.3.28",
+    "@types/sinon": "^4.3.3",
+    "@types/sinon-chai": "^2.7.31",
+    "caller": "^1.0.1",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "proxyquire": "^2.0.1",
+    "sinon": "^5.0.7",
+    "sinon-chai": "^3.0.0"
+  },
+  "devDependencies": {
+    "@headwood/ts-build-template": "0.0.2",
+    "@types/es6-promise": "^3.3.0",
+    "@types/mocha": "^5.2.0",
+    "@types/node": "^10.0.8",
+    "cpx": "^1.5.0",
+    "husky": "^0.14.3",
+    "mocha": "^5.1.1",
+    "nps": "^5.9.0",
+    "nyc": "^11.7.3",
+    "rimraf": "^2.6.2",
+    "source-map-support": "^0.5.0",
+    "ts-loader": "^4.3.0",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.8.0",
+    "tslint-config-airbnb": "^5.4.2",
+    "typescript": "^2.6.2"
+  }
+}

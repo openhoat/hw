@@ -1,0 +1,11 @@
+dist/
+.editorconfig
+.gitignore
+.idea/
+.node-version
+.nycrc
+.travis.yml
+lib/
+test/
+tsconfig.json
+tslint.json

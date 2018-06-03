@@ -1,0 +1,6 @@
+libDir: lib
+testDir: test
+typesDir: types
+builtDir: built
+distDir: dist
+mainScript: lib/helper.ts
