@@ -8,6 +8,6 @@ env:
     - PACKAGE=ts-build-template
     - PACKAGE=test-helper
 install:
-  - "npx lerna bootstrap --scope=@$SCOPE/$PACKAGE"
+  - "cd ts-build-template; npm i"
 script:
-  - "npx lerna run start cover.travis --scope=@$SCOPE/$PACKAGE"
+  - "cd ts-build-template; npm start cover.travis"
