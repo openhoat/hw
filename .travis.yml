@@ -8,6 +8,12 @@ env:
     - PACKAGE=private-map
     - PACKAGE=ts-build-template
     - PACKAGE=test-helper
+cache:
+  directories:
+    - node_modules
+    - packages/private-map/node_modules
+    - packages/ts-build-template/node_modules
+    - packages/test-helper/node_modules
 install:
   - "cd packages/$PACKAGE; npm i"
 script:
