@@ -8,6 +8,6 @@ env:
     - PACKAGE=ts-build-template
     - PACKAGE=test-helper
 install:
-  - "cd ts-build-template; npm i"
+  - "cd packages/$PACKAGE; npm i"
 script:
-  - "cd ts-build-template; npm start cover.travis"
+  - "cd packages/$PACKAGE; npm start cover.travis"
