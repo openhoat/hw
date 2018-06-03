@@ -4,7 +4,6 @@ compilerOptions:
   module: commonjs
   moduleResolution: node
   rootDir: .
-  baseUrl: ./
   outDir: '{{ builtDir }}'
   declaration: true
   noImplicitAny: true
@@ -14,9 +13,5 @@ compilerOptions:
   typeRoots:
     - node_modules/@types
     - '{{ typesDir }}'
-  paths:
-    '*':
-      - node_modules/@types/*
-      - '*'
 include:
   - '{{ libDir }}/**/*.ts'
