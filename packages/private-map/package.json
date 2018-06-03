@@ -1,6 +1,6 @@
 {
   "name": "@headwood/private-map",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Private map for real private class properties use",
   "main": "built/private-map.js",
   "types": "built/private-map",
