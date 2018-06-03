@@ -10,10 +10,6 @@ const chaiAsPromised = require('chai-as-promised')
 chaiUse(sinonChai)
 chaiUse(chaiAsPromised)
 
-function hasBeenCalled(fn) {
-  expect(fn).to.be.called
-}
-
 function asString(data) {
   return data === undefined ?
     'undefined' :
