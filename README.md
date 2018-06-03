@@ -9,11 +9,11 @@ This project is a nodejs multi modules project to use with [lerna](https://lerna
 
 ## Modules
 
-### @headwood/ts-build-template
+### [@headwood/ts-build-template](tree/master/packages/ts-build-template)
 
 [![npm version](https://badge.fury.io/js/%40headwood%2Fts-build-template.svg)](https://badge.fury.io/js/%40headwood%2Fts-build-template)
 
-### @headwood/test-helper
+### [@headwood/test-helper](tree/master/packages/test-helper)
 
 [![npm version](https://badge.fury.io/js/%40headwood%2Ftest-helper.svg)](https://badge.fury.io/js/%40headwood%2Ftest-helper)
 
