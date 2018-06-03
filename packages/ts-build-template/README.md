@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/openhoat/@headwood/ts-build-template.svg?branch=master)](https://travis-ci.org/openhoat/@headwood/ts-build-template)
-[![Coverage Status](https://coveralls.io/repos/github/openhoat/@headwood/ts-build-template/badge.svg?branch=master)](https://coveralls.io/github/openhoat/@headwood/ts-build-template?branch=master)
-[![NPM version](https://badge.fury.io/js/@headwood/ts-build-template.svg)](http://badge.fury.io/js/@headwood/ts-build-template)
+[![Build Status](https://travis-ci.org/openhoat/hw.svg?branch=master)](https://travis-ci.org/openhoat/hw)
+[![Coverage Status](https://coveralls.io/repos/github/openhoat/hw/badge.svg?branch=master)](https://coveralls.io/github/openhoat/hw?branch=master)
+[![npm version](https://badge.fury.io/js/%40headwood%2Fts-build-template.svg)](https://badge.fury.io/js/%40headwood%2Fts-build-template)
 
 # ts-build-template
 
