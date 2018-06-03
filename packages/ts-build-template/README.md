@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/openhoat/ts-build-template.svg?branch=master)](https://travis-ci.org/openhoat/ts-build-template)
-[![Coverage Status](https://coveralls.io/repos/github/openhoat/ts-build-template/badge.svg?branch=master)](https://coveralls.io/github/openhoat/ts-build-template?branch=master)
-[![NPM version](https://badge.fury.io/js/ts-build-template.svg)](http://badge.fury.io/js/ts-build-template)
+[![Build Status](https://travis-ci.org/openhoat/@hw/ts-build-template.svg?branch=master)](https://travis-ci.org/openhoat/@hw/ts-build-template)
+[![Coverage Status](https://coveralls.io/repos/github/openhoat/@hw/ts-build-template/badge.svg?branch=master)](https://coveralls.io/github/openhoat/@hw/ts-build-template?branch=master)
+[![NPM version](https://badge.fury.io/js/@hw/ts-build-template.svg)](http://badge.fury.io/js/@hw/ts-build-template)
 
 # ts-build-template
 
