@@ -6,6 +6,9 @@ import * as sinonChai from 'sinon-chai'
 import { noCallThru } from 'proxyquire'
 import * as supportsColor from 'supports-color'
 
+const useColors = !(process as any).browser &&
+  (supportsColor.stdout || process.env.MOCHA_COLORS !== undefined)
+
 const caller = require('caller')
 
 const proxyquireLoad = noCallThru().load
@@ -28,7 +31,7 @@ function asString(data: any) {
     'undefined' :
     (
       typeof data === 'object' ?
-        inspect(data, { colors: !!supportsColor, breakLength: Infinity }) :
+        inspect(data, { colors: useColors, breakLength: Infinity }) :
         data
     )
 }
