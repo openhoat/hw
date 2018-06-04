@@ -53,8 +53,5 @@
     "tslint": "^5.8.0",
     "tslint-config-airbnb": "^5.4.2",
     "typescript": "^2.6.2"
-  },
-  "optionalDependencies": {
-    "husky": "^0.14.3"
   }
 }
