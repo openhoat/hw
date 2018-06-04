@@ -4,45 +4,45 @@ scripts:
       script: nps clean.built && nps clean.dist
       description: Clean all the temp directories
     dist:
-      script: rimraf {{ distDir }}/**
+      script: npx rimraf {{ distDir }}/**
       description: Clean the dist directory
     built:
       default:
-        script: rimraf {{ builtDir }}/**
+        script: npx rimraf {{ builtDir }}/**
         description: Clean the built directory
     test-built:
       default:
-        script: rimraf {{ distDir }}/test-built/**
+        script: npx rimraf {{ distDir }}/test-built/**
         description: Clean the built test directory
   build:
     default:
       script: nps clean.built && nps build.generate && nps build.lib.compile && nps clean.test-built && nps build.test.types && nps build.test.compile
       description: Clean and build the project
     generate:
-      script: generate-tsconfig tsconfig.tpl.yml {{ libDir }}/tsconfig.tpl.yml {{ testDir }}/tsconfig.tpl.yml
+      script: npx generate-tsconfig tsconfig.tpl.yml {{ libDir }}/tsconfig.tpl.yml {{ testDir }}/tsconfig.tpl.yml
       description: Generate tsconfig.json
     lib:
       default:
         script: nps clean.built && nps build.generate && nps build.lib.compile
         description: Clean and build the project lib
       compile:
-        script: tsc -p {{ libDir }}
+        script: npx tsc -p {{ libDir }}
         description: Compile the project lib
     test:
       default:
-        script: nps clean.dist && nps build.test.types && nps build.test.compile
+        script: nps clean.dist && nps build.generate && nps build.test.types && nps build.test.compile
         description: Clean and build the project tests
       types:
-        script: cpx {{ typesDir }}/**/*.d.ts {{ distDir }}/test-built/types/
+        script: npx cpx {{ typesDir }}/**/*.d.ts {{ distDir }}/test-built/types/
         description: Copy types definitions to dist dir
       compile:
-        script: tsc -p {{ testDir }}
+        script: npx tsc -p {{ testDir }}
         description: Compile the project tests
   lint:
-    script: tslint -p .
+    script: npx tslint -p .
     description: Validate code quality
   test:
-    script: mocha --opts {{ testDir }}/mocha.opts {{ testDir }}/**/*.test.ts
+    script: npx mocha --opts {{ testDir }}/mocha.opts {{ testDir }}/**/*.test.ts
     description: Run tests
   cover:
     default:
@@ -67,5 +67,5 @@ scripts:
         script: nps cover && nps validate.cover.check
         description: Run test and validate coverage
       check:
-        script: nyc check-coverage --lines 80
+        script: npx nyc check-coverage --lines 80
         description: Validate code coverage
