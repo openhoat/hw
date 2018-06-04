@@ -19,7 +19,8 @@ scripts:
       script: nps clean.built && nps build.generate && nps build.lib.compile && nps clean.test-built && nps build.test.types && nps build.test.compile
       description: Clean and build the project
     generate:
-      script: npx generate-tsconfig tsconfig.tpl.yml {{ libDir }}/tsconfig.tpl.yml {{ testDir }}/tsconfig.tpl.yml
+      #script: npx generate-tsconfig tsconfig.tpl.yml {{ libDir }}/tsconfig.tpl.yml {{ testDir }}/tsconfig.tpl.yml
+      script: echo $PATH
       description: Generate tsconfig.json
     lib:
       default:
