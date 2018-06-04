@@ -15,7 +15,9 @@ cache:
     - packages/ts-build-template/node_modules
 before_install:
   - npm install npm@latest -g
+  - cd $TRAVIS_BUILD_DIR/packages/$PACKAGE
 install:
-  - cd $TRAVIS_BUILD_DIR/packages/$PACKAGE; npm ci
+  - npm install
+  - npm ci
 script:
-  - cd $TRAVIS_BUILD_DIR/packages/$PACKAGE; npm start cover
+  - npm start cover
