@@ -2,6 +2,11 @@ language: node_js
 env:
   global:
     - MOCHA_COLORS=true
+    - SCOPE=headwood
+  matrix:
+    - PACKAGE=private-map
+    - PACKAGE=ts-build-template
+    - PACKAGE=test-helper
 cache:
   directories:
     - node_modules
@@ -11,11 +16,6 @@ cache:
 before_install:
   - npm install npm@latest -g
 install:
-  - npm ci
-  - npm start bootstrap
-before_script:
-  - ls -Rl ${TRAVIS_BUILD_DIR}/packages/private-map/node_modules/@headwood/test-helper
-  - npm start run start build -- --scope=@headwood/private-map
-  - cat ${TRAVIS_BUILD_DIR}/packages/private-map/tsconfig.json
+  - cd $TRAVIS_BUILD_DIR/packages/$PACKAGE; npm ci
 script:
-  - npm start run start cover -- --scope=@headwood/private-map
+  - cd $TRAVIS_BUILD_DIR/packages/$PACKAGE; npm start cover
