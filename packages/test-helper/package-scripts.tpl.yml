@@ -20,7 +20,7 @@ scripts:
       description: Clean and build the project
     generate:
       #script: npx generate-tsconfig tsconfig.tpl.yml {{ libDir }}/tsconfig.tpl.yml {{ testDir }}/tsconfig.tpl.yml
-      script: echo $PATH
+      script: npx type generate-tsconfig
       description: Generate tsconfig.json
     lib:
       default:
