@@ -42,8 +42,12 @@ scripts:
     script: npx tslint -p .
     description: Validate code quality
   test:
-    script: npx mocha --opts {{ testDir }}/mocha.opts {{ testDir }}/**/*.test.ts
-    description: Run tests
+    default:
+      script: nps build.generate && nps test.run
+      description: Generate and run tests
+    run:
+      script: npx mocha --opts {{ testDir }}/mocha.opts {{ testDir }}/**/*.test.ts
+      description: Run tests
   cover:
     default:
       script: nps cover.$([ "$TRAVIS" = "true" ] && echo "travis" || echo "local")

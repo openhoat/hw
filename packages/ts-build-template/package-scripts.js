@@ -8,16 +8,16 @@ module.exports = {
         description: 'Clean all the temp directories',
       },
       dist: {
-        script: 'rimraf dist/**',
+        script: 'npx rimraf dist/**',
         description: 'Clean the dist directory',
       },
     },
     lint: {
-      script: 'eslint .',
+      script: 'npx eslint .',
       description: 'Validate code quality',
     },
     test: {
-      script: 'mocha test/**/*.test.js',
+      script: 'npx mocha test/**/*.test.js',
       description: 'Run tests',
     },
     cover: {
@@ -26,7 +26,7 @@ module.exports = {
         description: 'Run test coverage',
       },
       local: {
-        script: 'nyc nps "test --forbid-only"',
+        script: 'npx nyc nps "test --forbid-only"',
         description: 'Run local test coverage',
       },
       travis: {
@@ -35,7 +35,7 @@ module.exports = {
       },
       report: {
         travis: {
-          script: 'nyc report --reporter=text-lcov | coveralls',
+          script: 'npx nyc report --reporter=text-lcov | coveralls',
           description: 'Build travis coverage report',
         },
       },
@@ -51,7 +51,7 @@ module.exports = {
           description: 'Run test and validate coverage',
         },
         check: {
-          script: 'nyc check-coverage --lines 80',
+          script: 'npx nyc check-coverage --lines 80',
           description: 'Validate code coverage',
         },
       },
