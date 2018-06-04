@@ -7,17 +7,10 @@ env:
     - PACKAGE=private-map
     - PACKAGE=ts-build-template
     - PACKAGE=test-helper
-cache:
-  directories:
-    - node_modules
-    - packages/private-map/node_modules
-    - packages/test-helper/node_modules
-    - packages/ts-build-template/node_modules
 before_install:
   - npm install npm@latest -g
   - cd $TRAVIS_BUILD_DIR/packages/$PACKAGE
 install:
-  - npm install
   - npm ci
 script:
   - npm start cover
