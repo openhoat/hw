@@ -26,7 +26,7 @@ scripts:
         script: nps clean.built && nps build.generate && nps build.lib.compile
         description: Clean and build the project lib
       compile:
-        script: tsc -p {{ libDir }}
+        script: tsc -p {{ libDir }} --listFiles
         description: Compile the project lib
     test:
       default:
@@ -36,7 +36,7 @@ scripts:
         script: cpx {{ typesDir }}/**/*.d.ts {{ distDir }}/test-built/types/
         description: Copy types definitions to dist dir
       compile:
-        script: tsc -p {{ testDir }}
+        script: tsc -p {{ testDir }} --listFiles
         description: Compile the project tests
   lint:
     script: tslint -p .
