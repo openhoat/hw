@@ -12,6 +12,5 @@ before_install:
   - cd $TRAVIS_BUILD_DIR/packages/$MODULE
 install:
   - npm install
-  - ls -l node_modules/.bin/
 script:
   - npm start cover
