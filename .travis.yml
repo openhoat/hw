@@ -1,11 +1,17 @@
 language: node_js
-node_js:
-  - "10.0.0"
 env:
   global:
     - MOCHA_COLORS=true
+cache:
+  directories:
+    - node_modules
+    - packages/private-map/node_modules
+    - packages/test-helper/node_modules
+    - packages/ts-build-template/node_modules
+before_install:
+  - npm install npm@latest -g
 install:
-  - npm install
-  - npx lerna bootstrap
+  - npm ci
+  - npm start bootstrap
 script:
-  - npx lerna run start cover.travis
+  - npm start run start cover.travis
