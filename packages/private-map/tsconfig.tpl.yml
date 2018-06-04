@@ -14,5 +14,7 @@ compilerOptions:
   typeRoots:
     - node_modules/@types
     - '{{ typesDir }}'
+  lib:
+    - es6
 include:
   - '{{ libDir }}/**/*.ts'
