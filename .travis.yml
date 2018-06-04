@@ -11,6 +11,6 @@ before_install:
   - npm install npm@latest -g
   - cd $TRAVIS_BUILD_DIR/packages/$PACKAGE
 install:
-  - npm ci
+  - npm install
 script:
   - npm start cover
