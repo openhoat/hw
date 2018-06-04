@@ -4,49 +4,49 @@ scripts:
       script: 'nps clean.built && nps clean.dist'
       description: Clean all the temp directories
     dist:
-      script: 'npx rimraf {{ distDir }}/**'
+      script: 'rimraf {{ distDir }}/**'
       description: Clean the dist directory
     built:
       default:
-        script: 'npx rimraf {{ builtDir }}/**'
+        script: 'rimraf {{ builtDir }}/**'
         description: Clean the built directory
     test-built:
       default:
-        script: 'npx rimraf {{ distDir }}/test-built/**'
+        script: 'rimraf {{ distDir }}/test-built/**'
         description: Clean the built test directory
   build:
     default:
       script: 'nps clean.built && nps build.generate && nps build.lib.compile && nps clean.test-built && nps build.test.types && nps build.test.compile'
       description: Clean and build the project
     generate:
-      script: 'npx generate-tsconfig tsconfig.tpl.yml {{ libDir }}/tsconfig.tpl.yml {{ testDir }}/tsconfig.tpl.yml'
+      script: 'generate-tsconfig tsconfig.tpl.yml {{ libDir }}/tsconfig.tpl.yml {{ testDir }}/tsconfig.tpl.yml'
       description: Generate tsconfig.json
     lib:
       default:
         script: 'nps clean.built && nps build.generate && nps build.lib.compile'
         description: Clean and build the project lib
       compile:
-        script: 'npx tsc -p {{ libDir }}'
+        script: 'tsc -p {{ libDir }}'
         description: Compile the project lib
     test:
       default:
         script: 'nps clean.dist && nps build.generate && nps build.test.types && nps build.test.compile'
         description: Clean and build the project tests
       types:
-        script: 'npx cpx {{ typesDir }}/**/*.d.ts {{ distDir }}/test-built/types/'
+        script: 'cpx {{ typesDir }}/**/*.d.ts {{ distDir }}/test-built/types/'
         description: Copy types definitions to dist dir
       compile:
-        script: 'npx tsc -p {{ testDir }}'
+        script: 'tsc -p {{ testDir }}'
         description: Compile the project tests
   lint:
-    script: 'npx tslint -p .'
+    script: 'tslint -p .'
     description: Validate code quality
   test:
     default:
       script: 'nps build.generate && nps test.run'
       description: Generate and run tests
     run:
-      script: 'npx mocha --opts {{ testDir }}/mocha.opts {{ testDir }}/**/*.test.ts'
+      script: 'mocha --opts {{ testDir }}/mocha.opts {{ testDir }}/**/*.test.ts'
       description: Run tests
     run-avoid-only:
       script: 'nps build.generate && nps "test.run --forbid-only"'
@@ -56,7 +56,7 @@ scripts:
       script: 'nps cover.$([ "$TRAVIS" = "true" ] && echo "travis" || echo "local")'
       description: Run test coverage
     local:
-      script: 'npx nyc nps test.run-avoid-only'
+      script: 'nyc nps test.run-avoid-only'
       description: Run local test coverage
     travis:
       script: 'nps cover.local && nps cover.report.travis'
@@ -74,5 +74,5 @@ scripts:
         script: 'nps cover && nps validate.cover.check'
         description: Run test and validate coverage
       check:
-        script: 'npx nyc check-coverage --lines 80'
+        script: 'nyc check-coverage --lines 80'
         description: Validate code coverage
