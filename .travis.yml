@@ -4,9 +4,9 @@ env:
     - MOCHA_COLORS=true
     - SCOPE=headwood
   matrix:
-    - MODULE=ts-build-template
+#    - MODULE=ts-build-template
     - MODULE=test-helper
-    - MODULE=private-map
+#    - MODULE=private-map
 before_install:
   - npm install npm@latest -g
   - npm install npx@latest -g
@@ -15,4 +15,4 @@ install:
   - npm install
 script:
   - npx generate-tsconfig
-  - npm start cover --scope=@headwood/test-helper
+  - npm start cover
