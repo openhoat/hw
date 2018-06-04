@@ -1,22 +1,7 @@
 language: node_js
 node_js:
   - "10.0.0"
-env:
-  global:
-    - SCOPE=headwood
-  matrix:
-    - PACKAGE=private-map
-    - PACKAGE=ts-build-template
-    - PACKAGE=test-helper
-cache:
-  directories:
-    - node_modules
-    - packages/private-map/node_modules
-    - packages/ts-build-template/node_modules
-    - packages/test-helper/node_modules
 install:
-  - "cd $TRAVIS_BUILD_DIR/packages/$PACKAGE; npm i"
-before_script:
-  - "cd $TRAVIS_BUILD_DIR/packages/$PACKAGE; npm start build"
+  - "npx lerna bootstrap"
 script:
-  - "cd $TRAVIS_BUILD_DIR/packages/$PACKAGE; npm start cover.travis"
+  - "npx lerna run start cover.travis"
