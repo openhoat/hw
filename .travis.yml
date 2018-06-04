@@ -15,3 +15,5 @@ install:
   - npm start bootstrap
 script:
   - npm start run start cover.travis
+after_script:
+  - ls -l ${TRAVIS_BUILD_DIR}/packages/private-map/node_modules
