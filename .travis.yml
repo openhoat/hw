@@ -9,10 +9,9 @@ env:
 #    - MODULE=private-map
 before_install:
   - npm install npm@latest -g
-  - npm install npx@latest -g
   - cd $TRAVIS_BUILD_DIR/packages/$MODULE
 install:
   - npm install
+  - ls -l node_modules/.bin/
 script:
-  - npx generate-tsconfig
   - npm start cover
