@@ -4,6 +4,7 @@ import { inspect } from 'util'
 import { createSandbox, SinonSandbox, SinonStub, createStubInstance } from 'sinon'
 import * as sinonChai from 'sinon-chai'
 import { noCallThru } from 'proxyquire'
+import * as supportsColor from 'supports-color'
 
 const caller = require('caller')
 
@@ -27,7 +28,7 @@ function asString(data: any) {
     'undefined' :
     (
       typeof data === 'object' ?
-        inspect(data, { colors: process.stdin.isTTY, breakLength: Infinity }) :
+        inspect(data, { colors: !!supportsColor, breakLength: Infinity }) :
         data
     )
 }
