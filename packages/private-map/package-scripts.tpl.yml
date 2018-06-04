@@ -48,12 +48,15 @@ scripts:
     run:
       script: npx mocha --opts {{ testDir }}/mocha.opts {{ testDir }}/**/*.test.ts
       description: Run tests
+    run-avoid-only:
+      script: nps build.generate && nps "test.run --forbid-only"
+      description: Run tests avoiding .only
   cover:
     default:
       script: nps cover.$([ "$TRAVIS" = "true" ] && echo "travis" || echo "local")
       description: Run test coverage
     local:
-      script: nyc nps "test --forbid-only"
+      script: npx nyc nps test.run-avoid-only
       description: Run local test coverage
     travis:
       script: nps cover.local && nps cover.report.travis
