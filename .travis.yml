@@ -11,7 +11,7 @@ before_install:
   - npm install npm@latest -g
   - cd $TRAVIS_BUILD_DIR/packages/$PACKAGE
 install:
-  - pwd
   - npm install
 script:
+  - npx generate-tsconfig
   - npm start cover
