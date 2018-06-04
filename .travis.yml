@@ -16,5 +16,7 @@ cache:
     - packages/test-helper/node_modules
 install:
   - "cd $TRAVIS_BUILD_DIR/packages/$PACKAGE; npm i"
+after_install:
+  - "cd $TRAVIS_BUILD_DIR/packages/$PACKAGE; npm start build"
 script:
   - "cd $TRAVIS_BUILD_DIR/packages/$PACKAGE; npm start cover.travis"
