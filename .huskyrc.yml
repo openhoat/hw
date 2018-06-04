@@ -1,3 +1,3 @@
 hooks:
-  pre-commit: lerna run start lint && lerna run start 'test -- --forbid-only'
-  pre-push: lerna run start check
+  pre-commit: npm start run start lint && lerna run start 'test -- --forbid-only'
+  pre-push: npm start run start check
