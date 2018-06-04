@@ -4,12 +4,13 @@ env:
     - MOCHA_COLORS=true
     - SCOPE=headwood
   matrix:
-    - PACKAGE=ts-build-template
-    - PACKAGE=test-helper
-    - PACKAGE=private-map
+    - MODULE=ts-build-template
+    - MODULE=test-helper
+    - MODULE=private-map
 before_install:
   - npm install npm@latest -g
-  - cd $TRAVIS_BUILD_DIR/packages/$PACKAGE
+  - npm install npx@latest -g
+  - cd $TRAVIS_BUILD_DIR/packages/$MODULE
 install:
   - npm install
 script:
