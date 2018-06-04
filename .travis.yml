@@ -1,7 +1,11 @@
 language: node_js
 node_js:
   - "10.0.0"
+env:
+  global:
+    - MOCHA_COLORS=true
 install:
-  - "npx lerna bootstrap"
+  - npm install
+  - npx lerna bootstrap
 script:
-  - "npx lerna run start cover.travis"
+  - npx lerna run start cover.travis
