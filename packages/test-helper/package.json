@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "description": "Test helper",
   "main": "built/helper.js",
-  "types": "built/helper",
+  "types": "built/helper.d.ts",
   "scripts": {
     "start": "nps",
     "build": "nps build",

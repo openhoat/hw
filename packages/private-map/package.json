@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "description": "Private map for real private class properties use",
   "main": "built/private-map.js",
-  "types": "built/private-map",
+  "types": "built/private-map.d.ts",
   "scripts": {
     "start": "nps",
     "build": "nps build",
