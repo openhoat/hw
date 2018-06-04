@@ -22,7 +22,7 @@ module.exports = {
     },
     cover: {
       default: {
-        script: 'if [ "$TRAVIS" = "true" ]; then nps cover.travis; else nps cover.local; fi',
+        script: 'nps cover.$([ "$TRAVIS" = "true" ] && echo "travis" || echo "local")',
         description: 'Run test coverage',
       },
       local: {
