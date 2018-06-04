@@ -13,7 +13,8 @@ before_install:
 install:
   - npm ci
   - npm start bootstrap
-script:
-  - npm start run start cover.travis --scope=@headwood/private-map
-after_script:
+before_script:
   - ls -l ${TRAVIS_BUILD_DIR}/packages/private-map/node_modules
+  - cat ${TRAVIS_BUILD_DIR}/packages/private-map/tsconfig.json
+script:
+  - npm start run start cover -- --scope=@headwood/private-map
