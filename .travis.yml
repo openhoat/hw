@@ -14,6 +14,6 @@ install:
   - npm ci
   - npm start bootstrap
 script:
-  - npm start run start cover.travis
+  - npm start run start cover.travis --scope=@headwood/private-map
 after_script:
   - ls -l ${TRAVIS_BUILD_DIR}/packages/private-map/node_modules
